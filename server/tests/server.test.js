@@ -57,3 +57,22 @@ describe ('POST /todos', () => {
     });
 
 }); 
+
+describe('GET /todos', () => {
+
+    it('should retrieve all todos', (done) => {
+        request(app)
+        .get('/todos')
+        .expect(200)
+        .end((err,res) => {
+            if (err){
+                return done(err);
+            }
+
+            Todo.find().then((todos) => {
+                expect(todos).toEqual(res.body.todos);
+                done();
+            }).catch((e) => {done(e);});
+        });
+    });
+});
