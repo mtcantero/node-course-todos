@@ -21,13 +21,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp' ,(error,db) =>{
     //     console.log('Error : ', err);
     // });
 
-    db.collection('Users').find({
-        name : 'Mario'
-    }).toArray().then((docs) => {
-        console.log(JSON.stringify(docs,undefined,2));
-    }, (error) =>{
-        console.log('Unable to find Users, ', error);
-    } );
+    // db.collection('Users').find({
+    //     name : 'Mario'
+    // }).toArray().then((docs) => {
+    //     console.log(JSON.stringify(docs,undefined,2));
+    // }, (error) =>{
+    //     console.log('Unable to find Users, ', error);
+    // } );
 
     //db.close();
 });
