@@ -12,12 +12,12 @@ const todos = [{
         text: 'Second Dummy'
     }];
 
-beforeEach ((done) => {
-    Todo.remove({}).then(() => {
-        return Todo.insertMany(todos);
+// beforeEach ((done) => {
+//     Todo.remove({}).then(() => {
+//         return Todo.insertMany(todos);
         
-    }).then(() => done());
-});
+//     }).then(() => done());
+// });
 
 describe ('POST /todos', () => {
 
